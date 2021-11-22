@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-const NewFilmForm = () => {
+const NewFilmForm = ({onFilmSubmit}) => {
 
     const [name, setName] = useState("");
     const [url, setUrl] = useState("");
@@ -13,8 +13,25 @@ const NewFilmForm = () => {
         setUrl(event.target.value);
     }
 
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        const nameToSubmit = name.trim();
+        const urlToSubmit = url.trim();
+        if (!nameToSubmit || !urlToSubmit){
+            return
+        }
+        
+        onFilmSubmit({
+            name: nameToSubmit,
+            url: urlToSubmit
+        });
+
+        setName("");
+        setUrl("");
+    }
+
     return (
-        <form>
+        <form onSubmit={handleFormSubmit}>
             <input 
                 type="text" 
                 placeholder="Film name"

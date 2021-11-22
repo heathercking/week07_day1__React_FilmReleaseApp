@@ -4,7 +4,7 @@ import NewFilmForm from "../components/NewFilmForm";
 
 const FilmReleaseTable = () => {
 
-    const [films, setFilms] = useState(
+    let [films, setFilms] = useState(
         [
             {
               id: 1,
@@ -33,11 +33,17 @@ const FilmReleaseTable = () => {
           ]
     )
 
+    const addNewFilm = (submittedFilm) => {
+        submittedFilm.id = Date.now();
+        const updatedFilms = [...films, submittedFilm];
+        setFilms(updatedFilms);
+    }
+
     return (
         <>
             <h1>Upcoming Film Releases for UK</h1>
             <FilmListing films={films} />
-            <NewFilmForm />
+            <NewFilmForm onFilmSubmit={(film) => addNewFilm(film)} />
             <h2><a href="https://www.imdb.com/calendar/?region=gb">View more upcoming releases...</a></h2>
         </>
     );
