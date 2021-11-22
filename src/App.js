@@ -1,9 +1,11 @@
+import React from "react";
 import './App.css';
+import FilmReleaseTable from "./containers/FilmReleaseTable";
 
 
 function App() {
   return (
-    <h1>This is a film listing app!</h1>
+    <FilmReleaseTable />
   );
 }
 
