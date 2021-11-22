@@ -5,8 +5,8 @@ const FilmListing = () => {
 
     return (
         <>
-            <Film />
-            <Film />
+            <Film url="https://www.imdb.com/title/tt4633694/?ref_=rlm">Spider-Man: Into the Spider-Verse</Film>
+            <Film url="https://www.imdb.com/title/tt5989218/?ref_=rlm">Life Itself</Film>
         </>
     );
 }
