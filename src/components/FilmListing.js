@@ -1,9 +1,13 @@
 import React from "react";
+import Film from "./Film";
 
 const FilmListing = () => {
 
     return (
-        <p>I'm a FilmListing!</p>
+        <>
+            <Film />
+            <Film />
+        </>
     );
 }
 
