@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import FilmListing from "../components/FilmListing";
+import NewFilmForm from "../components/NewFilmForm";
 
 const FilmReleaseTable = () => {
 
@@ -36,7 +37,8 @@ const FilmReleaseTable = () => {
         <>
             <h1>Upcoming Film Releases for UK</h1>
             <FilmListing films={films} />
-            <h2><a href="https://www.imdb.com/calendar/?region=gb">View more upcoming releases >></a></h2>
+            <NewFilmForm />
+            <h2><a href="https://www.imdb.com/calendar/?region=gb">View more upcoming releases...</a></h2>
         </>
     );
 }
