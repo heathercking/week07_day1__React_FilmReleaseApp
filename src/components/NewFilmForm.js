@@ -31,24 +31,26 @@ const NewFilmForm = ({onFilmSubmit}) => {
     }
 
     return (
-        <form onSubmit={handleFormSubmit}>
-            <input 
-                type="text" 
-                placeholder="Film name"
-                value={name}
-                onChange={handleNameChange}
-            />
-            <input 
-                type="text" 
-                placeholder="IMDB url"
-                value={url}
-                onChange={handleUrlChange}
-            />
-            <input 
-                type="submit" 
-                placeholder="Post"
-            />
-        </form>
+        <div class="form-wrapper">
+            <form class="film-form" onSubmit={handleFormSubmit}>
+                <input 
+                    type="text" 
+                    placeholder="Film name"
+                    value={name}
+                    onChange={handleNameChange}
+                />
+                <input 
+                    type="text" 
+                    placeholder="IMDB url"
+                    value={url}
+                    onChange={handleUrlChange}
+                />
+                <input 
+                    type="submit" 
+                    placeholder="Post"
+                />
+            </form>
+        </div>
     )
 
 }

@@ -11,7 +11,11 @@ const FilmListing = ({films}) => {
 
     return (
         <>
-            {filmNodes}
+            <section class="films-container">
+                <ul class="film-listing">
+                    {filmNodes}
+                </ul>
+            </section>
         </>
     );
 }

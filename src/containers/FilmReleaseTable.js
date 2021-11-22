@@ -41,10 +41,12 @@ const FilmReleaseTable = () => {
 
     return (
         <>
+        <div class="film-release-table">
             <h1>Upcoming Film Releases for UK</h1>
-            <FilmListing films={films} />
             <NewFilmForm onFilmSubmit={(film) => addNewFilm(film)} />
+            <FilmListing films={films} />
             <h2><a href="https://www.imdb.com/calendar/?region=gb">View more upcoming releases...</a></h2>
+        </div>
         </>
     );
 }
